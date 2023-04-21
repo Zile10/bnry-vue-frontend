@@ -1,10 +1,23 @@
 <template>
-  <nav>
+  <!-- <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  </nav> -->
+  <NavBar/>
+  <main>
+    <router-view/>
+
+  </main>
 </template>
+
+<script>
+import NavBar from "@/components/SideNav.vue";
+export default {
+  components: {
+    NavBar
+  }
+}
+</script>
 
 <style>
 #app {
@@ -26,5 +39,9 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+main {
+  margin-left: 50px;
 }
 </style>
