@@ -38,10 +38,10 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #fff;
 }
 
 main {
-  margin-left: 50px;
+  margin-left: 60px;
 }
 </style>

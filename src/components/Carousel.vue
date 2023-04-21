@@ -31,10 +31,10 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="" class="d-block w-100" alt="..." />
+        <img :src="articles[1].urlToImage" class="d-block w-100" alt="..." />
         <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
+          <h5>{{ articles[1].title }}</h5>
+          <p></p>
         </div>
       </div>
       <div class="carousel-item">
@@ -69,10 +69,19 @@
 export default {
     computed: {
         articles() {
-            console.log('Articles:', this.$store.state.articles);
-            return this.$store.state.articles
+            let articles = this.$store.state.articles
+            return articles
         }
     },
 };
 </script>
-<style></style>
+<style>
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.3);;
+}
+
+
+</style>

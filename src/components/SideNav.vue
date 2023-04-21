@@ -7,37 +7,47 @@
         <span></span>
       </div>
       <div class="x-menu" v-else @click="toggleNavbar">
-        <img src="https://img.icons8.com/sf-regular-filled/48/FFFFFF/x.png" />
+        <img src="https://img.icons8.com/sf-regular-filled/48/FFFFFF/x.png"/>
       </div>
+      
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" v-show="navOpen">
+          <li class="nav-item">
+            <router-link to="/" class="nav-link active" aria-current="page" href="#">
+              <img src="https://img.icons8.com/ios/50/FFFFFF/home--v1.png"/>
+                Home
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/" class="nav-link" href="#">
+              <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/FFFFFF/external-south-africa-flags-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"/> 
+                South Africa
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/" class="nav-link" href="#">
+              <img src="https://img.icons8.com/ios/50/FFFFFF/geography--v1.png"/>
+                Global News
+            </router-link>
+          </li>
+        </ul>  
 
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <router-link to="/" class="nav-link active" aria-current="page" href="#">Home</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/" class="nav-link" href="#">Link</router-link>
-        </li>
-        <li class="nav-item dropdown">
-          <router-link to="/"
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Dropdown
-          </router-link>
-          <ul class="dropdown-menu">
-            <li><router-link to="/" class="dropdown-item" href="#">Action</router-link></li>
-            <li><router-link to="/" class="dropdown-item" href="#">Another action</router-link></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><router-link to="/" class="dropdown-item" href="#">Something else here</router-link></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
+        <ul class="navbar-nav nav-icons me-auto mb-2 mb-lg-0" v-show="!navOpen">
+          <li class="nav-item">
+            <router-link to="/" class="nav-link active" aria-current="page" href="#">
+              <img src="https://img.icons8.com/ios/50/FFFFFF/home--v1.png"/>
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/" class="nav-link" href="#">
+              <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/FFFFFF/external-south-africa-flags-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"/> 
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/" class="nav-link" href="#">
+              <img src="https://img.icons8.com/ios/50/FFFFFF/geography--v1.png"/>
+            </router-link>
+          </li>
+        </ul>  
     </nav>
   </div>
 </template>
@@ -63,7 +73,7 @@ export default {
   width: 300px;
   top: 0;
   left: 0px;
-  transition: 0.5s ease-in;
+  transition: 0.4s ease-in;
 }
 
 #navbar.navbar-closed {
@@ -99,10 +109,32 @@ export default {
   transition: 0.5 ease-in;
 }
 .navbar-nav {
-    margin-top: 30px;
+  position: absolute;
+  top: 100px;
+  text-align: left;
 }
 
 .active {
-    color: crimson !important;
+  color: crimson !important;
+}
+
+a:hover {
+  transform: translateX(5px);
+}
+a>img {
+  width: 32px;
+  margin-right: 8px;
+  position: relative;
+}
+
+a>img.small {
+  position: absolute;
+  right: 5px;
+  transition: 0.4s;
+}
+.nav-icons {
+  position: absolute;
+  top: 100px;
+  right: 10px;
 }
 </style>

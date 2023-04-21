@@ -25,7 +25,6 @@ export default {
   },
   computed: {
     articles() {
-      // console.log(this.$store.state.articles);
       return this.$store.state.articles
     }
   }
@@ -37,11 +36,21 @@ export default {
   .hero {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 90vh;
+    height: 95vh;
   }
   .hero-info {
-    background-color: cyan;
+    /* background-color: cyan; */
     /* width: 500px; */
-    
+    text-align: left;
+
   }
+  .hero>* {
+    width: 85%;
+    margin: auto;
+  }
+
+  .hero-carousel img {
+    height: 300px;
+  }
+
 </style>
