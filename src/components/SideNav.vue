@@ -10,7 +10,7 @@
         <img src="https://img.icons8.com/sf-regular-filled/48/FFFFFF/x.png"/>
       </div>
       
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" v-show="navOpen">
+        <ul class="navbar-nav navbar-open me-auto mb-2 mb-lg-0" v-show="navOpen">
           <li class="nav-item">
             <router-link to="/" class="nav-link active" aria-current="page" href="#">
               <img src="https://img.icons8.com/ios/50/FFFFFF/home--v1.png"/>
@@ -31,7 +31,7 @@
           </li>
         </ul>  
 
-        <ul class="navbar-nav nav-icons me-auto mb-2 mb-lg-0" v-show="!navOpen">
+        <ul class="navbar-nav nav-icons me-auto mb-2 mb-lg-0" :class="{closed: !navOpen}">
           <li class="nav-item">
             <router-link to="/" class="nav-link active" aria-current="page" href="#">
               <img src="https://img.icons8.com/ios/50/FFFFFF/home--v1.png"/>
@@ -127,14 +127,15 @@ a>img {
   position: relative;
 }
 
-a>img.small {
-  position: absolute;
-  right: 5px;
-  transition: 0.4s;
-}
 .nav-icons {
   position: absolute;
+  transition: 0.8s;
   top: 100px;
+  right: 230px;
+}
+
+.nav-icons.closed {
+  transition: 0.4s;
   right: 10px;
 }
 </style>
