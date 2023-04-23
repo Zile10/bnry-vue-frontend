@@ -26,6 +26,7 @@ export default {
 <style>
     .card {
         max-width: 50%;
+        max-height: 400px;
     }
     .card img {
         max-height: 250px;
