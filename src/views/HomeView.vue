@@ -1,28 +1,34 @@
 <template>
-  <div class="home">
-    <div class="hero">
-      <div class="hero-info my-auto">
-        <h2>Be Informed, with all the best and latest articles from your favourite Sources</h2>
-      </div>
-
-      <div class="hero-carousel my-auto">
-        <Carousel :articles="articles"/>
+  <div id="home">
+    <TopNav/>
+    <div class="news-container">
+      <Carousel/>
+      <div v-if="!articles">Loading...</div>
+      <div class="scroller" v-else>
+        <h3>Business</h3>
+        <div class="cards">
+          <Card :article="articles[0]"/>
+          <Card :article="articles[1]"/>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+
 import Carousel from "@/components/Carousel.vue";
+import TopNav from "@/components/TopNav.vue";
+import Card from "@/components/Card.vue";
+
 export default {
   name: 'HomeView',
   components: {
-    Carousel
+    Carousel, 
+    TopNav,
+    Card
   },
-  created() {
-    this.$store.dispatch("fetchArticles")
-  },
+  
   computed: {
     articles() {
       return this.$store.state.articles
@@ -33,24 +39,23 @@ export default {
 
 
 <style>
-  .hero {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: 95vh;
-  }
-  .hero-info {
-    /* background-color: cyan; */
-    /* width: 500px; */
-    text-align: left;
-
-  }
-  .hero>* {
-    width: 85%;
-    margin: auto;
+  #home {
+    width: 80%;
+    justify-content: center;
+    /* background-color: #888; */
+    margin: 0 auto;
   }
 
-  .hero-carousel img {
-    height: 300px;
+  .news-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
+  h3 {
+    text-align: start;
+  }
+  .cards {
+    display: flex;
+  }
 </style>

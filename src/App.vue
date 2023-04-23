@@ -1,20 +1,13 @@
 <template>
-  <!-- <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav> -->
-  <NavBar/>
-  <main>
-    <router-view/>
-
-  </main>
+  <SideNav/>
+  <RouterView/>
 </template>
 
 <script>
-import NavBar from "@/components/SideNav.vue";
+import SideNav from "@/components/SideNav.vue";
 export default {
   components: {
-    NavBar
+    SideNav
   }
 }
 </script>
@@ -26,19 +19,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  display: flex;
 }
 
 nav {
   padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #fff;
 }
 
 main {

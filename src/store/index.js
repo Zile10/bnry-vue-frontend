@@ -1,6 +1,6 @@
 import { createStore } from 'vuex';
 import axios from "axios";
-const apiUrl = "http://localhost:6969/"
+const apiUrl = "http://localhost:3000/"
 
 export default createStore({
   state: {
