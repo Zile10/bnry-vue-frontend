@@ -84,5 +84,9 @@ export default {
   justify-content: left;
 }
 
-
+@media only screen and (max-width: 720px) { 
+  .messages h5 {
+    display: none;
+  }
+}
 </style>
