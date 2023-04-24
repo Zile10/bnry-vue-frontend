@@ -6,19 +6,24 @@
       <img src="https://img.icons8.com/ios-glyphs/30/FFFFFF/menu--v1.png" class="burger-menu" @click="toggleNavbar"/>
       <ul class="navbar-nav nav-icons me-auto mb-2 mb-lg-0" :class="{closed: !navOpen}">
         <li class="nav-item">
-          <router-link to="/" class="nav-link" aria-current="page" href="#">
+          <a class="nav-link" aria-current="page" href="#homeDiv">
             <img src="https://img.icons8.com/ios/50/FFFFFF/home--v1.png" class="nav-icon"/>
-          </router-link>
+          </a>
         </li>
         <li class="nav-item">
-          <router-link to="/" class="nav-link" href="#">
-            <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/FFFFFF/external-south-africa-flags-vitaliy-gorbachev-lineal-vitaly-gorbachev.png" class="nav-icon"/> 
-          </router-link>
+          <a class="nav-link" href="#searchDiv">
+            <img src="https://img.icons8.com/ios-filled/50/FFFFFF/search--v1.png" class="nav-icon"/> 
+          </a>
         </li>
         <li class="nav-item">
-          <router-link to="/" class="nav-link" href="#">
-            <img src="https://img.icons8.com/ios/50/FFFFFF/geography--v1.png" class="nav-icon"/>
-          </router-link>
+          <a class="nav-link" href="#businessDiv">
+            <img src="https://img.icons8.com/ios/50/FFFFFF/business--v1.png" class="nav-icon"/>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#techDiv">
+            <img src="https://img.icons8.com/ios/50/FFFFFF/electronics.png" class="nav-icon"/>
+          </a>
         </li>
       </ul>
     </div>
@@ -28,78 +33,32 @@
       <div></div>
       <ul class="navbar-nav navbar-open me-auto mb-2 mb-lg-0" v-show="navOpen">
         <li class="nav-item">
-          <router-link to="/" class="nav-link" aria-current="page" href="#">
+          <a class="nav-link" aria-current="page" href="#homeDiv">
             <img src="https://img.icons8.com/ios/50/FFFFFF/home--v1.png" class="nav-icon"/>
               <span>Home</span>
-          </router-link>
+          </a>
         </li>
         <li class="nav-item">
-          <router-link to="/" class="nav-link" href="#">
-            <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/FFFFFF/external-south-africa-flags-vitaliy-gorbachev-lineal-vitaly-gorbachev.png" class="nav-icon"/> 
-              <span>South Africa</span>
-          </router-link>
+          <a class="nav-link" href="#searchDiv">
+            <img src="https://img.icons8.com/ios-filled/50/FFFFFF/search--v1.png" class="nav-icon"/> 
+              <span>Explore</span>
+          </a>
         </li>
         <li class="nav-item">
-          <router-link to="/" class="nav-link" href="#">
-            <img src="https://img.icons8.com/ios/50/FFFFFF/geography--v1.png" class="nav-icon"/>
-            <span>Global News</span>
-          </router-link>
+          <a class="nav-link" href="#businessDiv">
+            <img src="https://img.icons8.com/ios/50/FFFFFF/business--v1.png" class="nav-icon"/>
+            <span>Business</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#techDiv">
+            <img src="https://img.icons8.com/ios/50/FFFFFF/electronics.png" class="nav-icon"/>
+            <span>Technology</span>
+          </a>
         </li>
       </ul>
     </div>
   </div>
-
-  <!-- <div id="navbar" :class="{ 'navbar-closed': !navOpen }">
-    <nav>
-      <div class="burger-menu" v-if="!navOpen" @click="toggleNavbar">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="x-menu" v-else @click="toggleNavbar">
-        <img src="https://img.icons8.com/sf-regular-filled/48/FFFFFF/x.png"/>
-      </div>
-      
-        <ul class="navbar-nav navbar-open me-auto mb-2 mb-lg-0" v-show="navOpen">
-          <li class="nav-item">
-            <router-link to="/" class="nav-link active" aria-current="page" href="#">
-              <img src="https://img.icons8.com/ios/50/FFFFFF/home--v1.png"/>
-                Home
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/" class="nav-link" href="#">
-              <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/FFFFFF/external-south-africa-flags-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"/> 
-                South Africa
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/" class="nav-link" href="#">
-              <img src="https://img.icons8.com/ios/50/FFFFFF/geography--v1.png"/>
-                Global News
-            </router-link>
-          </li>
-        </ul>  
-
-        <ul class="navbar-nav nav-icons me-auto mb-2 mb-lg-0" :class="{closed: !navOpen}">
-          <li class="nav-item">
-            <router-link to="/" class="nav-link active" aria-current="page" href="#">
-              <img src="https://img.icons8.com/ios/50/FFFFFF/home--v1.png"/>
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/" class="nav-link" href="#">
-              <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/FFFFFF/external-south-africa-flags-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"/> 
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/" class="nav-link" href="#">
-              <img src="https://img.icons8.com/ios/50/FFFFFF/geography--v1.png"/>
-            </router-link>
-          </li>
-        </ul>  
-    </nav>
-  </div> -->
 </template>
 <script>
 export default {

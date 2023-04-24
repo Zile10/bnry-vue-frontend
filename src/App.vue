@@ -5,6 +5,7 @@
 
 <script>
 import SideNav from "@/components/SideNav.vue";
+
 export default {
   components: {
     SideNav
@@ -13,12 +14,13 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Serif:ital@1&display=swap');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #333;
   display: flex;
 }
 

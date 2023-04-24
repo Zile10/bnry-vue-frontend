@@ -3,8 +3,8 @@
         <img :src="item.urlToImage" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{ item.title }}</h5>
-            <p class="card-text">{{ item.description }}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <!-- <p class="card-text">{{ item.description }}</p> -->
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
     </div>
 </template>
@@ -25,8 +25,9 @@ export default {
 </script>
 <style>
     .card {
-        max-width: 50%;
+        width: 50%;
         max-height: 400px;
+        text-align: left;
     }
     .card img {
         max-height: 250px;
