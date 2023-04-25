@@ -73,6 +73,7 @@ export default {
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50px;
 }
 </style>

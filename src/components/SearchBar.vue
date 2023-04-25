@@ -26,8 +26,9 @@ export default {
     .search-bar {
         width: 85%;
         height: 60px;
-        margin: 10px auto;
-        background-color: #888;
+        margin: 20px auto;
+        border: 1px solid black;
+        border-radius: 5px;
         padding: 10px;
     }
 
