@@ -76,6 +76,24 @@
           </a>
         </li>
       </ul>
+
+      <ul class="navbar-nav nav-icons me-auto mb-2 mb-lg-0" :class="{closed: !navOpen}">
+        <li class="nav-item">
+          <a href="https://github.com/Zile10" target="_blank">
+            <img src="https://img.icons8.com/ios-glyphs/30/FFFFFF/github.png" loading="lazy" class="nav-icon invisible">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="mailto:johnnoad04@gmail.com" target="_blank">
+            <img src="https://img.icons8.com/fluency/48/null/gmail.png" loading="lazy" class="nav-icon invisible">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.linkedin.com/in/john-bruce-noad-518171266/" target="_blank" class="nav-icon invisible">
+            <img src="https://img.icons8.com/color/48/null/linkedin.png">
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -144,7 +162,7 @@ ul li a.router-link-exact-active {
 .burger-menu {
   cursor: pointer;
   border-radius: 30px;
-  padding: 5px;
+  padding: 8px;
   margin-top: 10px;
 }
 .burger-menu:hover {
