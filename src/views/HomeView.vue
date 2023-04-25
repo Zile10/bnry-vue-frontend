@@ -92,7 +92,6 @@ export default {
   #home {
     width: 100%;
     justify-content: center;
-    /* background-color: #888; */
     margin: 0 auto;
   }
 
